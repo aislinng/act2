@@ -7,11 +7,13 @@ Exercises
 3. How would you move the food?
 4. Change the snake to respond to mouse clicks.
 """
-
+import time
 from random import randrange
 from turtle import *
 
 from freegames import square, vector
+
+time.sleep(3)
 
 food = vector(0, 0)
 snake = [vector(10, 0)]
