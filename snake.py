@@ -8,12 +8,12 @@ Exercises
 4. Change the snake to respond to mouse clicks.
 """
 import time
-from random import randrange
+from random import randrange, choice
 from turtle import *
 
 from freegames import square, vector
 
-time.sleep(3)
+time.sleep(5)
 
 food = vector(0, 0)
 snake = [vector(10, 0)]
@@ -58,6 +58,16 @@ def move():
     square(food.x, food.y, 9, 'green')
     update()
     ontimer(move, 100)
+    ontimer(move_food, 500)
+def move_food():
+    """Move food one step randomly in a valid direction."""
+    directions = [vector(10, 0), vector(-10, 0), vector(0, 10), vector(0, -10)]
+    move_direction = choice(directions) 
+
+    new_food_pos = food + move_direction
+
+    if inside(new_food_pos):  
+        food.move(move_direction)  
 
 
 setup(420, 420, 370, 0)
