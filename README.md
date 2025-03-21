@@ -1,4 +1,4 @@
-#Código base de snake.py
+# Código base de snake.py
 #### Juego común de víbora que va tras su comida y paralelamente incrementa el tamaño de su cola.
 Las funciones que se agregaron y modificaron fueron: 
 * La comida podrá moverse al azar un paso a la vez y no deberá de salirse de la ventana
